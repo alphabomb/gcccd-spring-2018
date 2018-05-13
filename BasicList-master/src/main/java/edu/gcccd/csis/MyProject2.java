@@ -1,18 +1,25 @@
 package edu.gcccd.csis;
 
 import java.util.Iterator;
+import java.io.*;
+import java.util.Random;
 
 public class MyProject2 implements Project2 {
 
     @Override
     public NodeList<Integer> addition(NodeList<Integer> nodeList1, NodeList<Integer> nodeList2)
     {
+       // nodeList1 + nodeList1
         return null;
     }
 
     @Override
     public NodeList<Integer> addition(Iterator<NodeList<Integer>> iterator)
     {
+         summation = 0;
+        if (iterator.hasNext()){
+            iterator.next() = summation;
+        }
         return null;
     }
 
