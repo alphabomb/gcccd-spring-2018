@@ -9,29 +9,67 @@ public class MyProject2 implements Project2 {
     @Override
     public NodeList<Integer> addition(NodeList<Integer> nodeList1, NodeList<Integer> nodeList2)
     {
-       // nodeList1 + nodeList1
+        NodeList<Integer> myList = new NodeList<>();
+
+        byte[] arr1 = new byte[nodeList1.getLength()];
+        byte[] arr2 = new byte[nodeList2.getLength()];
+        for (int i = 0; i < nodeList1.getLength()-1; i++){
+            arr1[i] = it
+        }
+        // myList;
+
         return null;
     }
 
     @Override
     public NodeList<Integer> addition(Iterator<NodeList<Integer>> iterator)
     {
-         summation = 0;
-        if (iterator.hasNext()){
-            iterator.next() = summation;
+        NodeList<Integer> k;
+
+        while (iterator.hasNext()) {
+           k = iterator.next();
         }
-        return null;
+
+        return k;
     }
 
     @Override
     public void save(NodeList<Integer> nodeList, String fileName)
     {
-        // ???
+        byte[] arr = new byte[nodeList.getLength()];
+
+        try {
+            FileOutputStream out = new FileOutputStream(fileName);
+            //FileInputStream input = new FileInputStream(fileName);
+            out.write(arr);
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
     @Override
     public NodeList<Integer> load(String fileName)
     {
+        try {
+           // FileOutputStream out = new FileOutputStream(fileName);
+            FileInputStream input = new FileInputStream(fileName);
+
+
+
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         return null;
     }
 
