@@ -2,7 +2,6 @@ package edu.gcccd.csis;
 
 import java.util.Iterator;
 import java.io.*;
-import java.util.Random;
 
 public class MyProject2 implements Project2 {
 
@@ -11,14 +10,24 @@ public class MyProject2 implements Project2 {
     {
         NodeList<Integer> myList = new NodeList<>();
 
+        Integer sum = 0;
+
         byte[] arr1 = new byte[nodeList1.getLength()];
         byte[] arr2 = new byte[nodeList2.getLength()];
-        for (int i = 0; i < nodeList1.getLength()-1; i++){
-            arr1[i] = it
-        }
-        // myList;
 
-        return null;
+        for (int i = 0; i < nodeList1.getLength()-1; i++) {
+            arr1[i] = nodeList1.iterator().next().byteValue();
+        }
+
+        for (int i = 0; i < nodeList2.getLength()-1; i++) {
+            arr2[i] = nodeList1.iterator().next().byteValue();
+        }
+
+        for (int i = 0; i < nodeList1.getLength()-1; i++) {
+            arr1[i] + arr2[i] = sum;
+        }
+
+        return sum;
     }
 
     @Override
@@ -27,7 +36,7 @@ public class MyProject2 implements Project2 {
         NodeList<Integer> k;
 
         while (iterator.hasNext()) {
-           k = iterator.next();
+           k = k + iterator.next();
         }
 
         return k;
@@ -39,18 +48,12 @@ public class MyProject2 implements Project2 {
         byte[] arr = new byte[nodeList.getLength()];
 
         try {
-            FileOutputStream out = new FileOutputStream(fileName);
-            //FileInputStream input = new FileInputStream(fileName);
+            FileOutputStream out = new FileOutputStream("basicList.java");
             out.write(arr);
-
-
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 
     @Override
@@ -59,11 +62,9 @@ public class MyProject2 implements Project2 {
         try {
            // FileOutputStream out = new FileOutputStream(fileName);
             FileInputStream input = new FileInputStream(fileName);
+            NodeList<Integer> myList = new NodeList<>();
 
-
-
-
-
+            input.read();
 
         } catch (IOException e) {
             e.printStackTrace();
